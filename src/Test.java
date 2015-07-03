@@ -14,13 +14,13 @@ public class Test {
 			Connection conn = DriverManager.getConnection(
 //					"jdbc:mysql://127.0.0.1:3306/MARS_DEV_live", "Jack_Huang", "123456");
 //					"jdbc:mysql://127.0.0.1:3306/MARS_DEV_MYSQL", "root", "123456");
-					"jdbc:mysql://127.0.0.1:3306/MARS_DEV_MYSQL", "Jack_Huang", "123456");
+					"jdbc:mysql://127.0.0.1:3306/LUNA_DEV_LIVE", "Jack_Huang", "123456");
 			// 3.使用Connection来创建一个Statement对象
 			Statement stmt = conn.createStatement();
 			// 4.执行SQL语句
 			// Statement有三种执行SQL语句的方法
-			ResultSet rs = stmt.executeQuery("select PARAM_VAL "
-					+ "from T_SYS_PARAM WHERE PARAM_ID='MAIN_HOST_ADDR' ");
+			ResultSet rs = stmt.executeQuery("select 'OOXX' "
+					+ "from DUAL  ");
 			while (rs.next()) {
 				System.out.println(rs.getString(1));
 			}
