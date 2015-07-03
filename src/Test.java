@@ -12,6 +12,8 @@ public class Test {
 			// 2.使用DriverManager获取数据库连接，其中返回的Connection就代表了Java程序和数据库的连接
 			// 不同数据库的URL写法需要查看驱动文档，用户名、密码由DBA分配
 			Connection conn = DriverManager.getConnection(
+//					"jdbc:mysql://127.0.0.1:3306/MARS_DEV_live", "Jack_Huang", "123456");
+//					"jdbc:mysql://127.0.0.1:3306/MARS_DEV_MYSQL", "root", "123456");
 					"jdbc:mysql://127.0.0.1:3306/MARS_DEV_MYSQL", "Jack_Huang", "123456");
 			// 3.使用Connection来创建一个Statement对象
 			Statement stmt = conn.createStatement();
